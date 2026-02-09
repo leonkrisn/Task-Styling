@@ -58,6 +58,11 @@ body {
   display: none;
 }
 
+.swiper-slide {
+  width: 360px !important;
+}
+
+
 @media (min-width: 768px) {
   .navbar__item.one {
     display: flex;
@@ -72,8 +77,15 @@ body {
     display: flex;
     flex-direction: row;
   }
+
+  .brand_logo {
+    display: flex;
+    flex-wrap: wrap;
+  }
   
 }
+
+
 
 @media (min-width: 1120px) {
   .section__little-navbar {
@@ -101,6 +113,9 @@ body {
     background-color: bisque;
     border-radius: 20px;
   } */
+
+
+
    .swiper-pagination,
     .swiper-button-prev,
     .swiper-button-next {
@@ -522,7 +537,9 @@ p.brand_title {
 
 
 
-.brand {
+.brand,
+.card-wrapper {
+  user-select: none;
   justify-content: space-between;
   text-decoration: none;
   /* padding: 0 10px; */
@@ -606,6 +623,10 @@ img.brand__logo {
 
 
 
+/* .card-wrapper {
+  margin: 0 60px 35px;
+} */
+
 
 
 
@@ -658,3 +679,4 @@ input[type="checkbox"]#logo_btn:checked ~ .readMore_btn .logo_button::before {
 input[type="checkbox"]#logo_btn:checked ~ .brand.two {
   display: inline-flex;
 }
+
