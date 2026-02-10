@@ -82,6 +82,7 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
+
   
 }
 
@@ -116,9 +117,9 @@ body {
 
 
 
-   .swiper-pagination,
-    .swiper-button-prev,
-    .swiper-button-next {
+  .swiper-pagination,
+  .swiper-button-prev,
+  .swiper-button-next {
   display: block;
 }
 }
@@ -340,6 +341,7 @@ img {
 /* READ MORE BUTTON */
 
 
+
 .paragraph_one {
   display: inline-flex;
 }
@@ -362,6 +364,13 @@ label.paragraph_button {
   cursor: pointer;
   /* font-size: 50px; */
 }
+
+
+
+
+  .container .readMore_btn img::before {
+    display: inline-flex;
+  }
 
 
 
@@ -531,14 +540,16 @@ p.brand_title {
   display: inline-flex;
 }
 
+
+
 .brand_logo {
   margin-left: 50px;
+  
 }
 
 
 
-.brand,
-.card-wrapper {
+.brand {
   user-select: none;
   justify-content: space-between;
   text-decoration: none;
@@ -600,7 +611,10 @@ img.brand__logo {
   width: 30px;
 }
 
+
+
 .readMore_btn {
+
   margin-left: 30px;
   display: flex;
   width: 250px;
@@ -614,11 +628,6 @@ img.brand__logo {
   margin-bottom: 50px;
   transition: 0.3s ease-in;
 
-}
-
-
-.readMore_btn:hover {
-  box-shadow: 0px 0px 10px #c1c1c1;
 }
 
 
@@ -639,9 +648,7 @@ img.brand__logo {
 } */
 
 
-.brand.two {
-  display: none;
-}
+
 
 
 
@@ -662,21 +669,79 @@ label.logo_button {
 }
 
 
+/* HERE THE CODE ADD */
 
-.readMore_btn .logo_button::before {
+@media (max-width: 768px) {
+  .brand.one {
+    display: inline-flex;
+  }
+  .brand.two {
+    display: inline-flex;
+  }
+  img.logo_button {
+    display: none;
+  }
+
+  
+
+}
+
+
+
+@media (min-width: 768px) {
+
+  .brand_logo {
+  display: block;
+}
+
+  .brand_logo .readMore_btn:hover {
+  box-shadow: 0px 0px 10px #c1c1c1;
+}
+
+  .brand.one {
+    display: inline-flex;
+  }
+
+  .brand.two {
+  display: none;
+   }
+
+  .brand_logo .readMore_btn img.logo_button::before {
+    display: inline-flex;
+  }
+
+
+
+
+  .readMore_btn label.paragraph_button::before {
   content: "Read More";
 }
 
-input[type="checkbox"]#logo_btn:checked ~ .readMore_btn .logo_button::before {
+
+input[type="checkbox"]#paragraph_btn:checked ~ .readMore_btn label.paragraph_button::before {
   content: "Hide";
 }
+
+
+
+  
+  .readMore_btn label.logo_button::before {
+    content: "Read More";
+  }
+
+  input[type="checkbox"]#logo_btn:checked ~ .readMore_btn label.logo_button::before {
+    content: "Hide";
+  }
 
 
 
 /* SHOW/HIDE PARAGRAPH PRACTICE 1 - SUCCESS*/
 
 
-input[type="checkbox"]#logo_btn:checked ~ .brand.two {
-  display: inline-flex;
+  input[type="checkbox"]#logo_btn:checked ~ .brand.two {
+    display: inline-flex;
+  }
+
+
 }
 
